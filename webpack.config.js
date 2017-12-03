@@ -1,7 +1,9 @@
 const path = require('path');
 
 const webpack = require('webpack');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HandlebarsPlugin = require("handlebars-webpack-plugin");
 
 const srcPath = path.resolve(__dirname, 'src');
 const distPath = path.resolve(__dirname, 'dist');
@@ -31,7 +33,26 @@ const config = {
           from: path.resolve(srcPath, 'img/**'),
           to: path.join(distPath, 'assets')
         },
-      ])
+      ]),
+      new HandlebarsPlugin({
+            entry: path.join(srcPath, 'templates', '*.hbs'),
+            output: path.join(distPath, '[name].html'),
+            data: path.join(srcPath, 'js/data.json'),
+
+            helpers: {
+              resolvePriceRange: function resolvePriceRange(value) {
+                return [
+                  'beer',
+                  'wine',
+                  'cocktail'
+                ][value - 1];
+              }
+            },
+
+            partials: [
+                path.join(srcPath, 'partials', '*.hbs')
+            ],
+        })
     ]
 };
 
