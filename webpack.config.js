@@ -26,7 +26,11 @@ const config = {
           context: path.join(srcPath, 'html'),
           from: '*.html',
           to: distPath 
-        }
+        },
+        {
+          from: path.resolve(srcPath, 'img/**'),
+          to: path.join(distPath, 'assets')
+        },
       ])
     ]
 };
