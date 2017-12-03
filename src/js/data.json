@@ -58,6 +58,7 @@
         },
         {
             "name": "Exit Bár",
+            "vicinity": "Debrecen, Bajcsy-Zsilinszky utca 2.",
             "summary": "With its pleasant furnishing and decoration, Exit is a great opportunity to quit reality and forget about the sand of time. Although prices have gone up a bit lately, shots for 4 must be taken into consideration by every tipsy tripper.",
             "toDrink": "Duck: 4 shots - kacsa in hungarian",
             "extra": ["Table football"],
@@ -65,6 +66,7 @@
         },
         {
             "name": "Kis Jazz Bár",
+            "vicinity": "Debrecen, Kálvin tér 8.", 
             "summary": "If you know anything special about Kiss Jazz, feel free to drop me a message.",
             "toDrink": "Beer",
             "extra": ["Karaoke"],
