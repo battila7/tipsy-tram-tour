@@ -1,3 +1,5 @@
+const { mockPlacesService } = require('./mock-places-service');
+
 const PlacesApiCaller = {
     PlacesApiCaller({ service, successStatus, tooFastStatus, timeout }) {
         this.service = service;
@@ -17,7 +19,7 @@ const PlacesApiCaller = {
                 } else {
                     reject(status);
                 }
-            })
+            });
         });
     },
     retry(placeId, resolve, reject) {
@@ -31,7 +33,7 @@ const PlacesApiCaller = {
 
 const placesApiCaller = Object.create(PlacesApiCaller);
 placesApiCaller.PlacesApiCaller({
-    service: new google.maps.places.PlacesService(document.createElement('div')),
+    service: mockPlacesService,
     successStatus: google.maps.places.PlacesServiceStatus.OK,
     tooFastStatus: google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT,
     timeout: function timeout(handler) {
