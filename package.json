@@ -1,0 +1,19 @@
+{
+  "name": "tipsy-tram-tour",
+  "version": "1.0.0",
+  "description": "Intoxicated journey along the line of Tram 1 in Debrecen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/battila7/tipsy-tram-tour.git"
+  },
+  "author": "Attila Bagossy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/battila7/tipsy-tram-tour/issues"
+  },
+  "homepage": "https://github.com/battila7/tipsy-tram-tour#readme"
+}
