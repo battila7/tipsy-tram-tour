@@ -46,6 +46,13 @@ const config = {
                   'wine',
                   'cocktail'
                 ][value - 1];
+              },
+              printArray: function printArray(array) {
+                if (array) {
+                  return array.join(', ');
+                } else {
+                  return '';
+                }
               }
             },
 
