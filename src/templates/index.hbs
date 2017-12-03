@@ -17,79 +17,11 @@
 
 <body>
     <section class="has-parallax-bg">
-        <section class="hero is-fullheight transparent-bg has-white-text">
-            <div class="hero-head">
-                <header class="navbar written-with-leds">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <h1 class="is-size-2 is-capitalized has-tram-yellow-text">Tipsy Tram Tour</h1>
-                        </div>
-                        <div class="navbar-menu">
-                            <div class="navbar-end">
-                                <a class="navbar-item is-size-4 has-tram-yellow-text" href="#places">
-                                    Places
-                                </a>
-                                <a class="navbar-item is-size-4 has-tram-yellow-text">
-                                    Route
-                                </a>
-                                <a class="navbar-item is-size-4 has-tram-yellow-text">
-                                    Contact
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-            </div>
+        {{> partials/cover}}
 
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title is-size-1 written-with-leds has-white-text">
-                        A journey to forget, but an experience to remember.
-                    </h1>
-                </div>
-            </div>
-        </section>
+        {{> partials/places}}
 
-        <section id="places" class="section is-marginless dark-bg">
-            <div class="container">
-                <h1 class="title is-size-1 written-with-leds has-tram-yellow-text">Places</h1>
-                <h2 class="subtitle is-size-2 written-with-leds has-tram-yellow-text">Only to drink at</h2>
-            </div>
-        </section>
-
-        <section class="section is-marginless dark-bg">
-            <div class="container">
-                <h2 class="subtitle is-size-2 written-with-leds has-tram-yellow-text">Prices</h2>
-                <nav class="level prices-level">
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <img src="assets/img/beer.svg" alt="Picture">
-                            <p class="is-size-3 written-with-leds has-white-text">Low</p>
-                        </div> 
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <img src="assets/img/wine.svg" alt="Picture">
-                            <p class="is-size-3 written-with-leds has-white-text">Medium</p>
-                        </div> 
-                    </div>
-                    <div class="level-item has-text-centered">
-                        <div>
-                            <img src="assets/img/cocktail.svg" alt="Picture">
-                            <p class="is-size-3 written-with-leds has-white-text">High</p>
-                        </div> 
-                    </div>
-                </nav>
-            </div>
-        </section>
-
-        <section class="section is-marginless dark-bg">
-            <div id="publine" class="container">
-                {{#each pubs}}
-                    {{> partials/publine-entry}}
-                {{/each}}
-            </div>
-        </section>
+        {{> partials/route}}
     </section>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2NhCzeH_UGHFV-_fpephjq_Ep2ARAFOA&libraries=places"></script>
     <script src="assets/bundle.js"></script>
