@@ -12,7 +12,7 @@
             "name": "Al Capone Söröző",
             "placeId": "ChIJc5kxWG4OR0cRZr4lbNLe8eA",
             "summary": "Next stop, located in front of the state prison, is the Al Capone Söröző. Famous for its marvelous Spotify playlists (handpicked by the staff) and almighty black cat.",
-            "toDrink": "Double whiskey on the rocks and a glass of Kőbányai",
+            "toDrink": "Double whiskey on the rocks and a jar of Kőbányai",
             "extra": [],
             "priceRange": 2
         },
@@ -67,7 +67,7 @@
         {
             "name": "Kis Jazz Bár",
             "vicinity": "Debrecen, Kálvin tér 8.", 
-            "summary": "If you know anything special about Kiss Jazz, feel free to drop me a message.",
+            "summary": "Small, and stinky with idiots, but it's okay to take here a rest between two distant pubs.",
             "toDrink": "Beer",
             "extra": ["Karaoke"],
             "priceRange": 1
