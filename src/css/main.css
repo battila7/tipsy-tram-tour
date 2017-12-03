@@ -239,11 +239,11 @@
 .publine-content h2 {
   color: #303e49;
 }
-.publine-content p, .publine-content .cd-read-more, .publine-content .cd-date {
+.publine-content p, .publine-content .cd-read-more, .publine-content .pub-distance {
   font-size: 13px;
   font-size: 0.8125rem;
 }
-.publine-content .cd-read-more, .publine-content .cd-date {
+.publine-content .cd-read-more, .publine-content .pub-distance {
   display: inline-block;
 }
 .publine-content p {
@@ -260,7 +260,7 @@
 .no-touch .publine-content .cd-read-more:hover {
   background-color: #bac4cb;
 }
-.publine-content .cd-date {
+.publine-content .pub-distance {
   float: left;
   padding: .8em 0;
   opacity: .7;
@@ -284,7 +284,7 @@
     font-size: 16px;
     font-size: 1rem;
   }
-  .publine-content .cd-read-more, .publine-content .cd-date {
+  .publine-content .cd-read-more, .publine-content .pub-distance {
     font-size: 14px;
     font-size: 0.875rem;
   }
@@ -304,7 +304,7 @@
   .publine-content .cd-read-more {
     float: left;
   }
-  .publine-content .cd-date {
+  .publine-content .pub-distance {
     position: absolute;
     width: 100%;
     left: 122%;
@@ -325,7 +325,7 @@
   .publine-block:nth-child(even) .publine-content .cd-read-more {
     float: right;
   }
-  .publine-block:nth-child(even) .publine-content .cd-date {
+  .publine-block:nth-child(even) .publine-content .pub-distance {
     left: auto;
     right: 122%;
     text-align: right;

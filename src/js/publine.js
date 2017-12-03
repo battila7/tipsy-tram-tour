@@ -1,5 +1,6 @@
 module.exports = function populate(pubs) {
     const pubIterator = pubs[Symbol.iterator]();
+    
     for (content of document.querySelectorAll('.publine-content')) {
         const pub = pubIterator.next().value;
 
