@@ -6,7 +6,7 @@ const PubRepository = {
         this.data.push(pub);
     },
     getAll() {
-        return [].concat(this.pubs);
+        return [].concat(this.data);
     }
 };
 
