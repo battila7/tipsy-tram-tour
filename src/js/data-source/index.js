@@ -8,7 +8,7 @@ const DataSource = {
 };
 
 const dataSource = Object.create(DataSource);
-dataSource.DataSource(() => Promise.resolve(require('./data').pubs));
+dataSource.DataSource(() => Promise.resolve(require('../static-data').pubs));
 
 module.exports = {
     dataSource,

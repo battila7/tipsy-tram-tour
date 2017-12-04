@@ -37,7 +37,7 @@ const config = {
       new HandlebarsPlugin({
             entry: path.join(srcPath, 'templates', '*.hbs'),
             output: path.join(distPath, '[name].html'),
-            data: path.join(srcPath, 'js/data.json'),
+            data: path.join(srcPath, 'js/static-data.json'),
 
             helpers: {
               resolvePriceRange: function resolvePriceRange(value) {

@@ -13,5 +13,7 @@ module.exports = function populate(pubs) {
         content.querySelector('.show-on-the-map').addEventListener('click', function listener() {
             console.log(`Take me to ${pub.name}!`);
         });
+
+        content.querySelector('.pub-distance').innerHTML = `${pub.distanceFromStart.toLocaleString()} m`;
     }
 };

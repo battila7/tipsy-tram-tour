@@ -1,7 +1,9 @@
 const run = require('./pub-loader-pipeline');
+const populate = require('./publine');
 
 run({ useMockedData: true })
-  .then(results => console.log(results), err => console.log(err));
+  .then(results => populate(results))
+  .catch(err => console.log(err));
 
 var map = new GMaps({
     el: '.pubmap',
