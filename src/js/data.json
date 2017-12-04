@@ -63,7 +63,11 @@
             "toDrink": "Duck: 4 shots - kacsa in hungarian",
             "extra": ["Table football"],
             "priceRange": 3,
-            "rating": "Unknown"
+            "rating": "Unknown",
+            "location": {
+                "lat": 47.529971, 
+                "lng": 21.623596
+            }
         },
         {
             "name": "Kis Jazz Bár",
@@ -72,7 +76,11 @@
             "toDrink": "Beer",
             "extra": ["Karaoke"],
             "priceRange": 1,
-            "rating": "Unknown"
+            "rating": "Unknown",
+            "location": {
+                "lat": 47.532984, 
+                "lng": 21.625838
+            }
         },
         {
             "name": "Péterfia Rock Söröző",
