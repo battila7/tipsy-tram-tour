@@ -1,19 +1,49 @@
-module.exports = function populate(pubs) {
-    const pubIterator = pubs[Symbol.iterator]();
-    
-    for (content of document.querySelectorAll('.publine-content')) {
-        const pub = pubIterator.next().value;
+const { eventBus } = require('../event-bus');
+const { pubRepository } = require('../pub-repository');
 
-        content.querySelector('.vicinity').innerHTML = pub.vicinity;
+const PubLine = {
+    PubLine({ eventBus, pubRepository }) {
+        this.eventBus = eventBus;
+        this.pubRepository = pubRepository;
+    },
+    init() {
+        this.eventBus.addEventListener('data-loaded', () => this.populate(this.pubRepository.getAll()));
+    },
+    populate(pubs) {
+        const pubIterator = pubs[Symbol.iterator]();
+        
+        for (content of document.querySelectorAll('.publine-content')) {
+            const pub = pubIterator.next().value;
 
-        content.querySelector('.pub-rating > span').innerHTML = pub.rating;
+            content.querySelector('.vicinity').innerHTML = pub.vicinity;
 
-        content.querySelector('.pub-rating > span').innerHTML = pub.rating;
+            content.querySelector('.pub-rating > span').innerHTML = pub.rating;
 
-        content.querySelector('.show-on-the-map').addEventListener('click', function listener() {
-            console.log(`Take me to ${pub.name}!`);
-        });
+            content.querySelector('.pub-rating > span').innerHTML = pub.rating;
 
-        content.querySelector('.pub-distance').innerHTML = `${pub.distanceFromStart.toLocaleString()} m`;
+            content.querySelector('.show-on-the-map').addEventListener('click', () => {
+                const options = {
+                    detail: {
+                        location: pub.location
+                    }
+                };
+
+                console.log(options);
+
+                const event = new CustomEvent('show-on-the-map', options)
+
+                this.eventBus.dispatchEvent(event);
+            });
+
+            content.querySelector('.pub-distance').innerHTML = `${pub.distanceFromStart.toLocaleString()} m`;
+        }
     }
+};
+
+const pubLine = Object.create(PubLine);
+pubLine.PubLine({ eventBus, pubRepository });
+
+module.exports = {
+    pubLine,
+    PubLine
 };

@@ -1,8 +1,11 @@
+const { eventBus } = require('./event-bus');
+const { pubLine } = require('./publine');
 const run = require('./pub-loader-pipeline');
-const populate = require('./publine');
+
+pubLine.init();
 
 run({ useMockedData: true })
-  .then(results => populate(results))
+  .then(() => eventBus.dispatchEvent(new Event('data-loaded')))
   .catch(err => console.log(err));
 
 var map = new GMaps({
