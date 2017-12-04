@@ -28,8 +28,6 @@ const PubLine = {
                     }
                 };
 
-                console.log(options);
-
                 const event = new CustomEvent('show-on-the-map', options)
 
                 this.eventBus.dispatchEvent(event);

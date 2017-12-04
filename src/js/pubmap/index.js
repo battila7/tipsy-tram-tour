@@ -1,6 +1,7 @@
 const createMap = require('./create-map');
 const { eventBus } = require('../event-bus');
 const { pubRepository } = require('../pub-repository');
+const { scrollToElement } = require('../util');
 
 const PubMap = {
     PubMap({ createMap, eventBus, pubRepository }) {
@@ -12,6 +13,7 @@ const PubMap = {
     },
     init() {
         this.eventBus.addEventListener('data-loaded', () => this.populate());
+        this.eventBus.addEventListener('show-on-the-map', options => this.centerTo(options.detail.location));
     },
     populate() {
         this.markers = this.pubRepository.getAll().map(pub => {
@@ -28,6 +30,11 @@ const PubMap = {
         });
 
         this.map.addMarkers(this.markers.map(marker => marker.placeholder));
+    },
+    centerTo(location) {
+        this.map.setCenter(location.lat, location.lng);
+
+        scrollToElement(document.querySelector('.pubmap'), 1000);
     }
 };
 
