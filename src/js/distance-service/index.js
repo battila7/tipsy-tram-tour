@@ -1,7 +1,7 @@
 const walkingTravelMode = 'WALKING';
 
-const DistanceCalculator = {
-    DistanceCalculator({ service, successStatus }) {
+const DistanceService = {
+    DistanceService({ service, successStatus }) {
         this.service = service;
         this.successStatus = successStatus;
     },
@@ -16,7 +16,7 @@ const DistanceCalculator = {
                 travelMode: walkingTravelMode
             }, (response, status) => {
                 if (status == this.successStatus) {
-                    resolve(response.rows[0]);
+                    resolve(this.extractDistance(response));
                 } else {
                     reject(status);
                 }
@@ -25,16 +25,19 @@ const DistanceCalculator = {
     },
     toLatLng(location) {
         return new google.maps.LatLng(location.lat, location.lng);
+    },
+    extractDistance(response) {
+        return response.rows[0].elements[0].distance.value;
     }
 };
 
-const distanceCalculator = Object.create(DistanceCalculator);
-distanceCalculator.DistanceCalculator({
+const distanceService = Object.create(DistanceService);
+distanceService.DistanceService({
     service: new google.maps.DistanceMatrixService(),
     successStatus: 'OK'
 });
 
 module.exports = {
-    distanceCalculator,
-    DistanceCalculator
+    distanceService,
+    DistanceService
 };

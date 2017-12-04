@@ -1,4 +1,4 @@
-const { mockPlacesService } = require('./mock-places-service');
+const { mockPlacesService } = require('./mock/mock-places-service');
 
 const PlacesApiCaller = {
     PlacesApiCaller({ service, successStatus, tooFastStatus, timeout }) {
@@ -7,7 +7,7 @@ const PlacesApiCaller = {
         this.tooFastStatus = tooFastStatus;
         this.timeout = timeout;
     },
-    queryPlaceId(placeId) {
+    queryByPlaceId(placeId) {
         return new Promise((resolve, reject) => {
             this.service.getDetails({
                 placeId
@@ -26,7 +26,7 @@ const PlacesApiCaller = {
         this.timeout(handler.bind(this));
 
         function handler() {
-            this.queryPlaceId(placeId).then(resolve, reject);
+            this.queryByPlaceId(placeId).then(resolve, reject);
         }
     }
 };

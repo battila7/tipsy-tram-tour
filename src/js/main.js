@@ -6,13 +6,7 @@ const populate = require('./publine')
 
 const { distanceCalculator } = require('./distance-calculator');
 
-distanceCalculator.distanceBetween({
-  lat: 47.529971, 
-  lng: 21.623596
-}, {
-  lat: 47.532984, 
-  lng: 21.625838
-}).then(result => console.log(result), status => console.log(status));
+
 
 const placesApiPromises = pubs.map(pub => {
     if (pub.placeId) {
