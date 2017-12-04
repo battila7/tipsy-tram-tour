@@ -1,16 +1,33 @@
 const createMap = require('./create-map');
 const { eventBus } = require('../event-bus');
+const { pubRepository } = require('../pub-repository');
 
 const PubMap = {
-    PubMap({ createMap, eventBus }) {
+    PubMap({ createMap, eventBus, pubRepository }) {
         this.map = createMap();
         this.eventBus = eventBus;
+        this.pubRepository = pubRepository;
+
+        this.markers = [];
     },
     init() {
         this.eventBus.addEventListener('data-loaded', () => this.populate());
     },
     populate() {
-        console.log('add markers');
+        this.markers = this.pubRepository.getAll().map(pub => {
+            const placeholder = this.map.createMarker({
+                lat: pub.location.lat,
+                lng: pub.location.lng,
+                title: pub.name
+            });
+
+            return {
+                location: pub.location,
+                placeholder
+            };
+        });
+
+        this.map.addMarkers(this.markers.map(marker => marker.placeholder));
     }
 };
 
@@ -19,11 +36,12 @@ pubMap.PubMap({
     createMap: createMap.bind(null, {
         element: '.pubmap',
         location: { 
-            lat: 47.532535,
-            lng: 21.624908 
+            lat: 47.531295,
+            lng: 21.624691
         }
     }),
-    eventBus
+    eventBus,
+    pubRepository
 });
 
 module.exports = {

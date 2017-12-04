@@ -1,5 +1,5 @@
 module.exports = function createMap({ element, location }) {
-    var map = new GMaps({
+    return new GMaps({
         el: element,
         lat: location.lat,
         lng: location.lng,
