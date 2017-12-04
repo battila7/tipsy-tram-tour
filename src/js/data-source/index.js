@@ -8,7 +8,7 @@ const DataSource = {
 };
 
 const dataSource = Object.create(DataSource);
-dataSource.DataSource(() => Promise.resolve(require('./data')));
+dataSource.DataSource(() => Promise.resolve(require('./data').pubs));
 
 module.exports = {
     dataSource,

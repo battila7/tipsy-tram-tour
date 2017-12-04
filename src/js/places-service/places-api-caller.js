@@ -33,7 +33,7 @@ const PlacesApiCaller = {
 
 const placesApiCaller = Object.create(PlacesApiCaller);
 placesApiCaller.PlacesApiCaller({
-    service: mockPlacesService,
+    service: new google.maps.places.PlacesService(document.createElement('div')), // mockPlacesService,
     successStatus: google.maps.places.PlacesServiceStatus.OK,
     tooFastStatus: google.maps.places.PlacesServiceStatus.OVER_QUERY_LIMIT,
     timeout: function timeout(handler) {

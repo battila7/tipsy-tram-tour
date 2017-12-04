@@ -1,0 +1,245 @@
+{
+    "pubs": [
+        {
+            "name": "Petőfi Presszó",
+            "placeId": "ChIJGw_Lmm4OR0cRcP3bXZsZnFo",
+            "summary": "The ideal starting point for our alcoholic odyssey, named after the great hungarian poet and revolutionary. The steps at here are not the only thing to watch out for - keep an eye on your pockets too.",
+            "toDrink": "Beer",
+            "extra": [],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.52113780000001,
+                "lng": 21.62698690000002
+            },
+            "rating": 4.2,
+            "vicinity": "Debrecen, Petőfi tér 10",
+            "distanceFromPrevious": 0
+        },
+        {
+            "name": "Al Capone Söröző",
+            "placeId": "ChIJc5kxWG4OR0cRZr4lbNLe8eA",
+            "summary": "Next stop, located in front of the state prison, is the Al Capone Söröző. Famous for its marvelous Spotify playlists (handpicked by the staff) and almighty black cat.",
+            "toDrink": "Double whiskey on the rocks and a jar of Kőbányai",
+            "extra": [],
+            "priceRange": 2,
+            "location": {
+                "lat": 47.521852,
+                "lng": 21.629073999999946
+            },
+            "rating": 4.8,
+            "vicinity": "Debrecen, Wesselényi utca 57",
+            "distanceFromPrevious": 215
+        },
+        {
+            "name": "Róna Presszó",
+            "placeId": "ChIJKTji720OR0cRjOOg3qZwPTA",
+            "summary": "Notorious for the shady people visiting it, Róna has kind of a bad reputation. Nevertheless a tipsy tripper should give it a shot (or two). Just keep your mouth shut and your drinks down. ",
+            "toDrink": "Twisted - csavart in hungarian",
+            "extra": [
+                "Table football"
+            ],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.5240592,
+                "lng": 21.626934300000016
+            },
+            "rating": 4,
+            "vicinity": "Debrecen, Piac utca 74",
+            "distanceFromPrevious": 357
+        },
+        {
+            "name": "Pince Café & Music Club",
+            "placeId": "ChIJjc1RAnMOR0cR2ZPqNwdvnC4",
+            "summary": "Somewhat fancier than the previous ones, Pince is a great place for chattin' around with your chaps and killin' some time. For them tipsies, it offers high prices and comfortable couches.",
+            "toDrink": "Single whiskey",
+            "extra": [],
+            "priceRange": 2,
+            "location": {
+                "lat": 47.527555,
+                "lng": 21.626215000000002
+            },
+            "rating": 4.2,
+            "vicinity": "Debrecen, Piac utca 38",
+            "distanceFromPrevious": 404
+        },
+        {
+            "name": "Satu Söröző",
+            "placeId": "ChIJrduzInMOR0cRZKWmRwZRfXw",
+            "summary": "Steep steps and friendly prices are the most important factors when considering a drink at Satu. It got its name from a slangish hungarian proverb meaning being wrecked.",
+            "toDrink": "Vodka",
+            "extra": [],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.52821189999999,
+                "lng": 21.625385999999935
+            },
+            "rating": 3.3,
+            "vicinity": "Debrecen, Piac utca 41",
+            "distanceFromPrevious": 252
+        },
+        {
+            "name": "Derby Pub",
+            "placeId": "ChIJx576I3MOR0cR4gAjVC46wfY",
+            "summary": "Derby is a football and sports pub with mediocre prices and artificial grass. If you survived the steps of Satu, you can easily get over the absence of atmosphere in Derby.",
+            "toDrink": "White wine",
+            "extra": [
+                "Lottery"
+            ],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.528044,
+                "lng": 21.624899099999993
+            },
+            "rating": 4.5,
+            "vicinity": "Debrecen, Piac utca 41",
+            "distanceFromPrevious": 85
+        },
+        {
+            "name": "Korona Söröző",
+            "placeId": "ChIJYzU6zAwOR0cRR16H8e0lObI",
+            "summary": "Next to the stylish and try-hard bars of the Simonffy street, Korona (crown) is cozy place for slurping a beer or even two. Keep in mind, that Korona is rather small, so larger companies might not have enough room here.",
+            "toDrink": "Beer",
+            "extra": [],
+            "priceRange": 2,
+            "location": {
+                "lat": 47.5287961,
+                "lng": 21.623586499999988
+            },
+            "rating": 4.8,
+            "vicinity": "Debrecen, Hal köz 4",
+            "distanceFromPrevious": 126
+        },
+        {
+            "name": "Exit Bár",
+            "vicinity": "Debrecen, Bajcsy-Zsilinszky utca 2.",
+            "summary": "With its pleasant furnishing and decoration, Exit is a great opportunity to quit reality and forget about the sand of time. Although prices have gone up a bit lately, shots for 4 must be taken into consideration by every tipsy tripper.",
+            "toDrink": "Duck: 4 shots - kacsa in hungarian",
+            "extra": [
+                "Table football"
+            ],
+            "priceRange": 3,
+            "rating": "Unknown",
+            "location": {
+                "lat": 47.529971,
+                "lng": 21.623596
+            },
+            "distanceFromPrevious": 394
+        },
+        {
+            "name": "Kis Jazz Bár",
+            "vicinity": "Debrecen, Kálvin tér 8.",
+            "summary": "Small, and stinky with idiots, but it's okay to take here a rest between two distant pubs.",
+            "toDrink": "Beer",
+            "extra": [
+                "Karaoke"
+            ],
+            "priceRange": 1,
+            "rating": "Unknown",
+            "location": {
+                "lat": 47.532984,
+                "lng": 21.625838
+            },
+            "distanceFromPrevious": 480
+        },
+        {
+            "name": "Péterfia Rock Söröző",
+            "placeId": "ChIJ75NczeENR0cRG2X6ZiABlms",
+            "summary": "As its name suggests, Péterfia Rock is a place where the lovers of rock music can really feel home. Fortunately, prices won't hit your pocket as hard as the music is.",
+            "toDrink": "Beer",
+            "extra": [
+                "Table football",
+                "Jukebox"
+            ],
+            "priceRange": 2,
+            "location": {
+                "lat": 47.53701770000001,
+                "lng": 21.625512999999955
+            },
+            "rating": 4.2,
+            "vicinity": "Debrecen, 44, Péterfia utca 42",
+            "distanceFromPrevious": 492
+        },
+        {
+            "name": "Stay",
+            "placeId": "ChIJrQZIu-ENR0cRWC_vHV0-JFc",
+            "summary": "A relatively new pub with a wide and fine selection of handcrafted hungarian beers. Despite the name, tipsies should not stay here that long as the journey goes on!",
+            "toDrink": "Handcrafted beer",
+            "extra": [],
+            "priceRange": 2,
+            "location": {
+                "lat": 47.5372405,
+                "lng": 21.625470899999982
+            },
+            "rating": 4.6,
+            "vicinity": "Debrecen, Thaly Kálmán utca 2",
+            "distanceFromPrevious": 30
+        },
+        {
+            "name": "Svejk",
+            "placeId": "ChIJEzH1o-ENR0cRSR2uX8Qtdho",
+            "summary": "A rather small, but just as friendly tavern a few metres away from Stay. Svejk is best remembered for its free table football and friendly staff.",
+            "toDrink": "Beer",
+            "extra": [
+                "Table football",
+                "Jukebox"
+            ],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.53740690000001,
+                "lng": 21.625411100000065
+            },
+            "rating": 4.3,
+            "vicinity": "Debrecen, Péterfia utca 46",
+            "distanceFromPrevious": 30
+        },
+        {
+            "name": "Mátyás Pince",
+            "placeId": "ChIJ91BPaeENR0cRYWOlgQfXPGY",
+            "summary": "Only suggested for wealthy tipsies, Mátyás Pince presents a wide selection of hungarian wines. Watch your step!",
+            "toDrink": "Wine",
+            "extra": [],
+            "priceRange": 3,
+            "location": {
+                "lat": 47.5388405,
+                "lng": 21.62558009999998
+            },
+            "rating": 4.5,
+            "vicinity": "Debrecen, Péterfia utca 61",
+            "distanceFromPrevious": 187
+        },
+        {
+            "name": "Ibolya Söröző",
+            "placeId": "ChIJS9Hic-ENR0cRXqbsvemLZ6A",
+            "summary": "Being one of the most famous assets in the Debrecen nightlife, Ibolya is a must for every trip either as a starting or a (proposed) ending point. Offering a huge spectrum of drinks and activities, Ibolya is a black hole of time and money, where countless university terms have already been and are being wasted.",
+            "toDrink": "Jutka vodka",
+            "extra": [
+                "Table football",
+                "Pool",
+                "Jukebox"
+            ],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.53827039999999,
+                "lng": 21.62522739999997
+            },
+            "rating": 4.2,
+            "vicinity": "Debrecen, Péterfia utca 56",
+            "distanceFromPrevious": 90
+        },
+        {
+            "name": "Mob",
+            "placeId": "ChIJg_Y3Z-ENR0cRieBC5NxD-p8",
+            "summary": "Kind of an extra place after Ibolya, Mob is an optional ending point of your odyssey that you won't ever reach (or if you do, it's your mistake). Prices are low, just as the furnishing.",
+            "toDrink": "Home brewed beer",
+            "extra": [],
+            "priceRange": 1,
+            "location": {
+                "lat": 47.5395475,
+                "lng": 21.624911200000042
+            },
+            "rating": 4.3,
+            "vicinity": "Debrecen, Bem tér 1",
+            "distanceFromPrevious": 143
+        }
+    ]
+}

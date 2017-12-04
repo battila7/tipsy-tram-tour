@@ -19,7 +19,18 @@ const PlacesService = {
         const result = Object.assign({}, requested);
 
         if (response) {
-            result.location = response.geometry.location;
+            result.location = {
+                lat: response.geometry.location.lat,
+                lng: response.geometry.location.lng
+            };
+
+            if (typeof result.location.lat == 'function') {
+                result.location.lat = result.location.lat();
+            }
+
+            if (typeof result.location.lng == 'function') {
+                result.location.lng = result.location.lng();
+            }
 
             result.rating = response.rating;
 
@@ -31,7 +42,7 @@ const PlacesService = {
 }
 
 const placesService = Object.create(PlacesService);
-placesService.PlacesService(placesApiCaller);
+placesService.PlacesService({ placesApiCaller });
 
 module.exports = {
     placesService,
