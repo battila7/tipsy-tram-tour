@@ -7,7 +7,7 @@ function callPlacesService(pubs) {
     return Promise.all(pubs.map(pub => placesService.enrichWithPlacesData(pub)));
 }
 
-function calculateDistances(pubs) {
+function calculateDistanceFromPrevious(pubs) {
     const addDistance = (distance, pub) => Object.assign({}, pub, { distanceFromPrevious: distance });
 
     const distancePromises = [ Promise.resolve(pubs[0]).then(pub => addDistance(0, pub)) ];
@@ -22,6 +22,22 @@ function calculateDistances(pubs) {
     return Promise.all(distancePromises);
 }
 
+function calculateDistanceFromStart(pubs) {
+    const result = [];
+
+    for (let i = 0; i < pubs.length; ++i) {
+        let distanceFromStart = 0;
+
+        if (i != 0) {
+            distanceFromStart = pubs[i].distanceFromPrevious + result[i - 1].distanceFromStart;
+        }
+
+        result.push(Object.assign({}, pubs[i], { distanceFromStart }));
+    }
+
+    return result;
+}
+
 function saveData(pubs) {
     return pubs.map(pub => {
         pubRepository.add(pub);
@@ -30,9 +46,18 @@ function saveData(pubs) {
     });
 }
 
-module.exports = function run() {
-    return dataSource.retrieve()
-        .then(callPlacesService)
-        .then(calculateDistances)
+module.exports = function run({ useMockedData }) {
+    let basePromise;
+
+    if (useMockedData) {
+        basePromise = Promise.resolve(require('./mock/mock-data').pubs);
+    } else {
+        basePromise = dataSource.retrieve()
+            .then(callPlacesService)
+            .then(calculateDistanceFromPrevious);
+    }
+
+    return basePromise
+        .then(calculateDistanceFromStart)
         .then(saveData);
 };
