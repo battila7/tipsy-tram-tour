@@ -44,9 +44,11 @@ const PubMap = {
     modifyOdyssey(count) {
         console.log(count);
 
-        const routeDescriptors = odyssey.forBeersPerPlace(2, this.pubRepository.getAll().map(pub => pub.location));
-
         this.map.removePolylines();
+
+        const routeDescriptors = odyssey.forBeersPerPlace(count, this.pubRepository.getAll().map(pub => pub.location));
+
+        console.log(routeDescriptors);
 
         routeDescriptors.forEach(desc => {
             this.map.drawRoute({
