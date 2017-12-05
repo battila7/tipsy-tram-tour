@@ -49,6 +49,28 @@
     background: rgba(0, 0, 0, 0.65);
 }
 
+.has-black-text {
+  color: black;
+}
+
+.beer-counter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.beer-counter img {
+  width: 32px;
+}
+
+.beer-counter-decrease:hover {
+  filter: brightness(130%)
+}
+
+.beer-counter-increase:hover {
+  filter: brightness(130%)
+}
+
 .pub-properties {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;

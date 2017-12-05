@@ -1,3 +1,4 @@
+const { beerCounter } = require('./beer-counter'); 
 const { eventBus } = require('./event-bus');
 const { menu } = require('./menu');
 const { pubLine } = require('./publine');
