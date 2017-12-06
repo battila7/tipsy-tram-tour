@@ -49,6 +49,10 @@
     background: rgba(0, 0, 0, 0.65);
 }
 
+.black-bg {
+    background: black;
+}
+
 .has-black-text {
   color: black;
 }
